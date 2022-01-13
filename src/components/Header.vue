@@ -34,7 +34,8 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
         height: 80px;
         background-color: white;
     }
