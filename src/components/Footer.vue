@@ -91,12 +91,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
+
     .footer-container {
         width: 100%;
-        height: 480px;
         background-image: url(../assets/img/footer-bg.jpg);
-
     }   
+
     .container {
         position: relative;
         display: flex;
@@ -107,6 +107,8 @@ export default {
         display: flex;
 
         .col {
+            position: relative;
+            z-index: 100;
             h2 {
                 margin-top: 2rem;
                 margin-bottom: 0.8rem;
@@ -119,6 +121,7 @@ export default {
                 list-style-type: none;
                 margin-bottom: 2rem;
                 margin-right: 1rem;
+                
                 li a {
                     display: block;
                     text-decoration: none;
@@ -131,7 +134,6 @@ export default {
     }
 
     .col-img {
-        height: 480px;
         overflow: hidden;
 
         img {
@@ -166,6 +168,13 @@ export default {
             padding: 1rem;
             text-transform: uppercase;
             color: white;
+            cursor: pointer;
+
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: $DC-blue;
+            }
         }
 
     .social {
@@ -188,6 +197,4 @@ export default {
         }
     }
     
-
-
 </style>

@@ -22,6 +22,8 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
     .buy {
+        position: relative;
+        z-index: 100;
         background-color: $DC-blue;
 
         ul {

@@ -3,7 +3,7 @@
         <img src="../assets/img/dc-logo.png" alt="">
         <ul>
             <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
+            <li><a href="#" class="active">Comics</a></li>
             <li><a href="#">Movies</a></li>
             <li><a href="#">Tv</a></li>
             <li><a href="#">Games</a></li>
@@ -57,7 +57,9 @@ export default {
             font-size: 0.8rem;
             font-weight: 600;
 
-            &:hover {
+            &:hover,
+            &:active,
+            &.active {
                 color: $DC-blue;
                 border-bottom: 4px solid $DC-blue;
             }
