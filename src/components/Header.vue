@@ -48,8 +48,8 @@ export default {
         list-style-type: none;
 
         li a{
-            padding: 1rem 0;
-            margin: 0 1rem;
+            margin: 0 0.8rem;
+            padding: calc(80px / 2 - 0.8rem + 2px) 0; //altezza header / 2 - altezza font + (bordo / 2)
             text-decoration: none;
             color: black;
             text-transform: uppercase;
