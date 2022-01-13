@@ -105,13 +105,14 @@ export default {
 
     .links {
         display: flex;
-
+        margin: 2rem 0;
         .col {
             position: relative;
             z-index: 100;
+
             h2 {
-                margin-top: 2rem;
-                margin-bottom: 0.8rem;
+                margin-top: 1rem;
+                margin-bottom: 0.4rem;
                 margin-right: 2rem;
                 text-transform: uppercase;
                 color: white;
@@ -119,9 +120,7 @@ export default {
 
             ul {
                 list-style-type: none;
-                margin-bottom: 2rem;
                 margin-right: 1rem;
-                
                 li a {
                     display: block;
                     text-decoration: none;
@@ -134,7 +133,6 @@ export default {
     }
 
     .col-img {
-        overflow: hidden;
 
         img {
             position: absolute;
