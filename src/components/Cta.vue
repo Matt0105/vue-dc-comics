@@ -45,6 +45,7 @@ export default {
                     height: 2rem;
                     margin-right: 1rem;
                 }
+                
             }
         }
     }

@@ -13,17 +13,20 @@
             :title="comicList[index].series" />
             <button>Load more</button>
       </div>
+      <Cta />
   </div>
 </template>
 
 <script>
 
+import Cta from "./Cta.vue";
 import ComicElement from "./ComicElement.vue";
 
 export default {
     name: "Main",
     components: {
         ComicElement,
+        Cta
     },
     data() {
         return {

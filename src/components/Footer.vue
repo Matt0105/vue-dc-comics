@@ -127,6 +127,10 @@ export default {
                     color: gray;
                     padding-right: 0.5rem;
                     padding: 0.2rem 0;
+
+                    &:hover {
+                        color: white;
+                    }
                 }
             }
         }
