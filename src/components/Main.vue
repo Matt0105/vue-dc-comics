@@ -4,10 +4,14 @@
           <img src="../assets/img/jumbotron.jpg" alt="">
       </div>
       <div class="container">
-        <ComicElement v-for="(comic, index) in comicList"
-         :key=index
-         :thumb="comicList[index].thumb"
-         :title="comicList[index].series" />
+          <div class="head-title">
+              <h2>Current Series</h2>
+          </div>
+            <ComicElement v-for="(comic, index) in comicList"
+            :key=index
+            :thumb="comicList[index].thumb"
+            :title="comicList[index].series" />
+            <button>Load more</button>
       </div>
   </div>
 </template>
@@ -107,7 +111,7 @@ export default {
 
     .main-content {
         width: 100%;
-        background-color: black;
+        background-color: $bg-black;
     }
 
     .jumbo img{
@@ -118,9 +122,32 @@ export default {
     }
     
     .container {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         padding: 2rem 0;
+
+        .head-title {
+            position: absolute;
+            top: -2rem; //font-size + top side padding
+            align-self: center;
+            padding: 0.8rem 1.5rem;
+            background-color: $DC-blue;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: white;
+
+        }
+
+        button {
+            border: none;
+            padding: 0.8rem 1.5rem;
+            background-color: $DC-blue;
+            text-transform: uppercase;
+            color: white;
+            margin: 0 auto;
+            cursor: pointer;
+        }
     }
 
     
