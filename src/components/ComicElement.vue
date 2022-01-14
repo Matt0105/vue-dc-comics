@@ -16,14 +16,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ @import "../assets/scss/partials/_mixins.scss";
+
     .card-container {
-        
-        width: calc(100% / 6 - 2rem);
+        @include dimensions(calc(100% / 6 - 2rem), none);
         margin: 1rem;
         overflow: hidden;
         
         img {
-            width: 100%;
+            @include dimensions(100%, none);
             aspect-ratio: 1 / 1;
             object-fit: cover;
             object-position: top;

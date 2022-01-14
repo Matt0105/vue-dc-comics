@@ -27,7 +27,7 @@ export default {
 @import "./assets/scss/style.scss";
 
 .container {
-  width: 80%;
+  @include dimensions(80%, none);
   margin: 0 auto;
 }
 </style>

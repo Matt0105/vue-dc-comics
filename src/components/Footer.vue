@@ -91,9 +91,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
+@import "../assets/scss/partials/_mixins.scss";
 
     .footer-container {
-        width: 100%;
+        @include dimensions(100%, none);
         background-image: url(../assets/img/footer-bg.jpg);
     }   
 
@@ -142,7 +143,7 @@ export default {
             position: absolute;
             top: -50px;
             right: 0;
-            height: 120%;
+            @include dimensions(none, 120%);
             object-position: top;
         }
     }
@@ -150,8 +151,7 @@ export default {
     .footer-bottom {
         display: flex;
         align-items: center;
-        width: 100%;
-        height: 80px;
+        @include dimensions(100%, 80px);
         background-color: $footer-color;
     }
 

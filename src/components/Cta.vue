@@ -32,6 +32,10 @@ export default {
             align-items: center;
             list-style-type: none;
 
+            li:last-child img {
+                height: 1.6rem;
+            }
+
             li a{
                 display: flex;
                 align-items: center;

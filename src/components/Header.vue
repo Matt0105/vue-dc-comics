@@ -34,10 +34,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
+@import "../assets/scss/partials/_mixins.scss";
 
     .header-container {
-        width: 100%;
-        height: 80px;
+        @include dimensions(100%, 80px);
         background-color: white;
     }
 
@@ -45,13 +45,12 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
-        height: 100%;
+        @include dimensions(80%, 100%);
         margin: 0 auto;
     }
 
     img {
-        height: 80%;
+        @include dimensions(none, 80%);
     }
 
     ul {
@@ -77,6 +76,6 @@ export default {
     }
 
     .jumbo img {
-        height: 500px;
+        @include dimensions(none, 500px);
     }
 </style>

@@ -111,15 +111,15 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
+@import "../assets/scss/partials/_mixins.scss";
 
     .main-content {
-        width: 100%;
+        @include dimensions(100%, none);
         background-color: $bg-black;
     }
 
     .jumbo img{
-        width: 100%;
-        height: 400px;
+        @include dimensions(100%, 400px);
         object-fit: cover;
         object-position: top;
     }
