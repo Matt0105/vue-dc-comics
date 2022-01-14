@@ -10,7 +10,8 @@
             <ComicElement v-for="(comic, index) in comicList"
             :key=index
             :thumb="comicList[index].thumb"
-            :title="comicList[index].series" />
+            :title="comicList[index].series" 
+            :price="comicList[index].price"/>
             <button>Load more</button>
       </div>
       <Cta />
