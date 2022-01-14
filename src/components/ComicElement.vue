@@ -1,10 +1,15 @@
 <template>
   <div class="card-container">
     <div class="thumb">
+
+        <div class="type-label">
+            <span>{{ type }}</span>
+        </div>
         <img :src="thumb" :alt="title">
         <div class="price-label">
             <span>{{ price }}</span>
         </div>
+
     </div>
     <h3>{{ title }}</h3>
   </div>
@@ -16,7 +21,8 @@ export default {
     props: {
         thumb: String,
         title: String,
-        price: String
+        price: String,
+        type: String
     }
 }
 </script>
@@ -36,7 +42,6 @@ export default {
             object-fit: cover;
             object-position: top;
             transition: all 0.3s;
-
         }
 
         h3 {
@@ -55,29 +60,49 @@ export default {
                 opacity: 1;
             }
 
-            &:hover img{
+            &:hover img {
                 opacity: 0.3;
             }
 
-            &:hover .price-label{
+            &:hover .price-label {
+                opacity: 1;
+            }
+
+            &:hover .type-label {
                 opacity: 0.8;
+                top: 0;
+            }
+
+            .price-label, .type-label {
+                position: absolute;
+                left: 50%;
+                z-index: 100;
+                background-color: $DC-blue;
+                color: white;
+                opacity: 0;
+                transition: all 0.4s;
+            }
+
+            .price-label{
+                top: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0.6rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .type-label {
+                top: -30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include dimensions(80%, 30px);
+                transform: translateX(-50%);
+                text-transform: uppercase;
+                font-size: 0.8rem;
             }
 
         }
-
-        .price-label {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 100;
-            padding: 0.8rem 1.2rem;
-            background-color: $DC-blue;
-            color: white;
-            border-radius: 5px;
-            opacity: 0;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
+ 
     }
 </style>

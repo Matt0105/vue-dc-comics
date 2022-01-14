@@ -11,7 +11,8 @@
             :key=index
             :thumb="comicList[index].thumb"
             :title="comicList[index].series" 
-            :price="comicList[index].price"/>
+            :price="comicList[index].price"
+            :type="comicList[index].type"/>
             <button>Load more</button>
       </div>
       <Cta />
